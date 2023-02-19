@@ -11,6 +11,13 @@
 % leadsheets and gchords both have \chord so we have to save one to prevent collision
 \savesymbol{chord}
 \usepackage{gchords}
+\usepackage{musixtex}
+
+\def\musicintext#1#2{% normal
+  {\let\extractline\relax
+   \smallmusicsize \nobarnumbers
+   \staffbotmarg0pt \setclef1{#1}
+   \startextract\addspace{-\afterruleskip}#2\endextract}}
 
 \begin{document}
 
@@ -31,5 +38,15 @@
         & & & & & \\
     \hline
 \end{tabular}
+
+\begin{music}
+    \startextract
+    \Notes \zw c\zw e\zw g\zw i\en
+    \endextract
+\end{music}
+
+As an example
+\raisebox{0ex}[5ex][4ex]%
+{\musicintext{\notes\wh{gg}\en}}
 
 \end{document}
