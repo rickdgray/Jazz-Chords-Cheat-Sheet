@@ -6,3 +6,4 @@ Notes
 * https://mirror.mwt.me/ctan/macros/musixtex/doc/musixdoc.pdf
 * http://tug.ctan.org/info/latex4musicians/latex4musicians.pdf
 * https://tsmp.org/keyboard/lias/pdf/Symbols.pdf
+* https://music.stackexchange.com/questions/3732/which-notes-are-optional-in-jazz-chords
