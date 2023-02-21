@@ -20,23 +20,271 @@
 
 {
 \centering
-\begin{tabular}{ p{3cm} p{2cm} p{3cm} p{2cm} c c }
-    \multicolumn{6}{c}{Jazz Chords} \\
+\begin{tabular}{ p{3.75cm} p{1.5cm} p{2.75cm} p{2cm} p{4.25cm} p{2cm} }
+    \multicolumn{6}{c}{\Huge{Jazz Chords in C}} \\
     \hline
-        \multirow{6}{*}{    Major Seventh } & & &
-        \multirowcell{6}{   \raisebox{0ex}[5ex][4ex]
-                                {\musicintext{\staffbotmarg2\Interligne
-                                \Notes \zw c\zw e\zw g\zw i\en}} } &
-        \multirowcell{6}{   \begin{tikzpicture}
-                                \node[anchor=south west,inner sep=0] (image) at (0,0) {
-                                    \includegraphics[width=0.2\textwidth]{assets/cmaj7.png}};
-                            \end{tikzpicture} } &
-        \multirowcell{6}{   \chord{t}{n,f3p3,f2p2,n,f1p1,n}{C} } \\
-        & C\textsuperscript{maj7} & • Major Seventh & & & \\
-        & C$\Delta$\textsuperscript{7} & • Perfect Fifth & & & \\
-        & Cma\textsuperscript{7} & • Major Third & & & \\
-        & CM\textsuperscript{7} & • Root & & & \\
-        & & & & & \\
+        \makecell[cl]{
+            Minor Seventh} &
+        \makecell[cl]{
+            Cm\textsuperscript{7} \\
+            C\textendash\textsuperscript{7} \\
+            Cmi\textsuperscript{7} \\
+            Cmin\textsuperscript{7}} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cm7.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Seventh \\
+            Dominant Seventh} &
+        \makecell[cl]{
+            C\textsuperscript{7}} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/c7.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Major Seventh} &
+        \makecell[cl]{
+            C\textsuperscript{maj7} \\
+            C$\Delta$\textsuperscript{7} \\
+            Cma\textsuperscript{7} \\
+            CM\textsuperscript{7}} &
+        \makecell[cl]{
+            • Major Seventh \\
+            • Perfect Fifth \\
+            • Major Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\zw i\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cmaj7.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Sixth \\
+            Major Sixth} &
+        \makecell[cl]{
+            C\textsuperscript{6}} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/c6.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Diminished} &
+        \makecell[cl]{
+            C\textsuperscript{o} \\
+            Cdim} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cdim.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Fully Dim Seventh} &
+        \makecell[cl]{
+            C\textsuperscript{o7} \\
+            Cdim\textsuperscript{7}} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cdim7.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Half Dim Seventh} &
+        \makecell[cl]{
+            C\textsuperscript{\o{}7} \\
+            Cm\textsuperscript{7$\flat$5} \\
+            C\textendash\textsuperscript{7$\flat$5}} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cm7b5.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Minor Ninth} &
+        \makecell[cl]{
+            Cm9} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cm9.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Ninth \\
+            Dominant Ninth} &
+        \makecell[cl]{
+            C9} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/c9.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Major Ninth} &
+        \makecell[cl]{
+            Cmaj9} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/cmaj9.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Eleventh} &
+        \makecell[cl]{
+            C11} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/c11.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Thirteenth} &
+        \makecell[cl]{
+            C13} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/c13.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
+    \hline
+        \makecell[cl]{
+            Augmented} &
+        \makecell[cl]{
+            C\textsuperscript{+} \\
+            Caug \\
+            C\textsuperscript{$\sharp$5}} &
+        \makecell[cl]{
+            • Perfect Fifth \\
+            • Minor Third \\
+            • Root} &
+        \makecell[cc]{
+            \raisebox{0ex}[5ex][1ex]{
+                \musicintext{\staffbotmarg2\Interligne
+                \Notes \zw c\zw e\zw g\en}}} &
+        \makecell[cc]{
+            \begin{tikzpicture}
+                \node{\includegraphics[width=0.2\textwidth]{assets/caug.png}};
+            \end{tikzpicture}} &
+        \makecell[cl]{
+            \chord{t}{n,f3p3,f2p2,n,f1p1,n}{}} \\
     \hline
 \end{tabular}\par
 }
