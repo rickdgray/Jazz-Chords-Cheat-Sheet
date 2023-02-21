@@ -13,11 +13,11 @@
 \usepackage{gchords}
 \usepackage{musixtex}
 
-\def\musicintext#1#2{% normal
+\def\musicintext#1{
   {\let\extractline\relax
    \smallmusicsize \nobarnumbers
-   \staffbotmarg0pt \setclef1{#1}
-   \startextract\addspace{-\afterruleskip}#2\endextract}}
+   \staffbotmarg0pt
+   \startextract\addspace{-\afterruleskip}#1\endextract}}
 
 \begin{document}
 
@@ -28,7 +28,9 @@
     \hline
         \multirow{6}{*}{\writechord{Cmaj7}} &
         \multirow{6}{*}{Major Seventh} & &
-        \multirowcell{6}{ notes image } &
+        \multirowcell{6}{ \raisebox{0ex}[5ex][4ex]
+            {\musicintext{\staffbotmarg2\Interligne
+            \Notes \zw c\zw e\zw g\zw i\en}} } &
         \multirowcell{6}{ piano image } &
         \multirowcell{6}{\chord{t}{n,f3p3,f2p2,n,f1p1,n}{C}} \\
         & & Root & & & \\
@@ -38,15 +40,5 @@
         & & & & & \\
     \hline
 \end{tabular}
-
-\begin{music}
-    \startextract
-    \Notes \zw c\zw e\zw g\zw i\en
-    \endextract
-\end{music}
-
-As an example
-\raisebox{0ex}[5ex][4ex]%
-{\musicintext{\notes\wh{gg}\en}}
 
 \end{document}
