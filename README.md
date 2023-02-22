@@ -1,9 +1,3 @@
 # Jazz Chords Cheat Sheet
 
-Notes
-* https://ctan.org/tex-archive/macros/musixtex/doc/musixdoc
-* https://pianochord.org/cmaj7.html
-* https://mirror.mwt.me/ctan/macros/musixtex/doc/musixdoc.pdf
-* http://tug.ctan.org/info/latex4musicians/latex4musicians.pdf
-* https://tsmp.org/keyboard/lias/pdf/Symbols.pdf
-* https://music.stackexchange.com/questions/3732/which-notes-are-optional-in-jazz-chords
+Quit googling for whatever a Cm7b5 is and just keep this [cheat sheet](https://github.com/rickdgray/Jazz-Chords-Cheat-Sheet/blob/main/jazz-chords.pdf) on hand.
