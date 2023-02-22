@@ -14,13 +14,13 @@
   {\let\extractline\relax
    \nobarnumbers
    \staffbotmarg0pt
-   \startextract\addspace{-\afterruleskip}#1\endextract}}
+   \startextract\addspace{-\afterruleskip}\qsk#1\endextract}}
 
 \begin{document}
 
 {
 \centering
-\begin{tabular}{ p{3cm} p{1.1cm} p{3.15cm} p{1.55cm} p{4.25cm} p{1.6cm} p{1.9cm} }
+\begin{tabular}{ p{2.9cm} p{1cm} p{3.15cm} p{1.75cm} p{4.25cm} p{1.6cm} p{1.9cm} }
     \multicolumn{7}{c}{\Huge{Jazz Chords in C}} \\
     \hline
         \makecell[cl]{
@@ -35,7 +35,7 @@
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{_e}\zw{g}\zw{_i}\en}}} &
+                \Notes \zw{c}\accshift=0.6mm\zw{_e}\accshift=0mm\zw{g}\zw{_i}\en}}} &
         \makecell[cc]{
             \begin{tikzpicture}
                 \node{\includegraphics[width=0.2\textwidth]{assets/cm7.png}};
@@ -97,7 +97,7 @@
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\zw{h}\en}}} &
+                \Notes \zw{c}\zw{e}\zw{g}\qsk\zw{h}\en}}} &
         \makecell[cc]{
             \begin{tikzpicture}
                 \node{\includegraphics[width=0.2\textwidth]{assets/c6.png}};
@@ -121,7 +121,7 @@
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{_e}\zw{_g}\en}}} &
+                \Notes \hqsk\zw{c}\accshift=1.4mm\zw{_e}\accshift=0mm\zw{_g}\en}}} &
         \makecell[cc]{
             \begin{tikzpicture}
                 \node{\includegraphics[width=0.2\textwidth]{assets/cdim.png}};
@@ -145,7 +145,7 @@
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{_e}\zw{_g}\zw{<i}\en}}} &
+                \Notes \qsk\zw{c}\accshift=0.4mm\zw{_e}\accshift=2.8mm\zw{_g}\accshift=0mm\zw{<i}\en}}} &
         \makecell[cc]{
             \begin{tikzpicture}
                 \node{\includegraphics[width=0.2\textwidth]{assets/cdim7.png}};
@@ -170,7 +170,7 @@
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{_e}\zw{_g}\zw{_i}\en}}} &
+                \Notes \tqsk\zw{c}\accshift=0.4mm\zw{_e}\accshift=2.2mm\zw{_g}\accshift=0mm\zw{_i}\en}}} &
         \makecell[cc]{
             \begin{tikzpicture}
                 \node{\includegraphics[width=0.2\textwidth]{assets/cm7b5.png}};
@@ -194,7 +194,7 @@
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{_e}\zw{g}\zw{_i}\zw{k}\en}}} &
+                \Notes \zw{c}\accshift=0.6mm\zw{_e}\accshift=0mm\zw{g}\zw{_i}\zw{k}\en}}} &
         \makecell[cc]{
             \begin{tikzpicture}
                 \node{\includegraphics[width=0.2\textwidth]{assets/cm9.png}};
