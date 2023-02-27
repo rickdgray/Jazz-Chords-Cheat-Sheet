@@ -11,7 +11,7 @@
 % --------------------------------------------------------------------------
 % message handling
 \newcommand*\gcs@error@message{%
-  For details have a look at the `guitarchordschemes' manual.%
+    For details have a look at the `guitarchordschemes' manual.%
 }
 
 \cnltx@create@generic@message{gcs}{gtabs}{Error}{\gcs@error@message}
@@ -20,26 +20,26 @@
 \cnltx@create@generic@message{gcs}{gtabs}{Info}{}
 
 \newcommand*\gcs@missing@date@error[2]{%
-  \gcs@error
+    \gcs@error
     {#1: empty #2}
     {#1: It seems you didn't specify the #2}%
 }
 
 \newrobustcmd*\gcs@def[1]{%
-  \ifdef{#1}
+    \ifdef{#1}
     {%
-      \gcs@error
+        \gcs@error
         {The macro \string#1\space is already defined}
         {%
-          The macro \string#1\space is already defined. Please let the package
-          author know%
+            The macro \string#1\space is already defined. Please let the package
+            author know%
         }%
     }
     {\protected\def#1}%
 }
 
 \newrobustcmd*\gcs@deprecated@option[2]{%
-  \gcs@warning{Since version #1 the option `#2' has been dropped}%
+    \gcs@warning{Since version #1 the option `#2' has been dropped}%
 }
 
 % --------------------------------------------------------------------------
@@ -58,40 +58,33 @@
 
 \newcommand*\gcs@string@number{6}
 \newcommand*\gcs@setstringnumber[1]{%
-  \ifnumless{#1}{1}
+    \ifnumless{#1}{1}
     {%
-      \gcs@warning{You can't use less than one string. Setting string number
-        to 1}%
-      \def\gcs@string@number{1}%
+        \gcs@warning{You can't use less than one string. Setting string number
+            to 1}%
+        \def\gcs@string@number{1}%
     }
     {%
-      \ifnumgreater{#1}{7}
+        \ifnumgreater{#1}{7}
         {%
-          \gcs@warning{You can't use more than seven
-            strings. Setting string number to 6}%
-          \def\gcs@string@number{6}%
+            \gcs@warning{You can't use more than seven
+                strings. Setting string number to 6}%
+            \def\gcs@string@number{6}%
         }
         {\def\gcs@string@number{#1}}%
     }%
 }
 
-\newbool{gcs@switch@name}
-
 \newcommand*\gcs@chordscheme@fret@number{4}
-
-\newrobustcmd*\gcs@chord@tuning[1]{%
-  \foreach \string@name [count=\x] in {#1}
-    {\csxdef{guitar@string@\x}{\expandonce\string@name}}%
-}
 
 \newbool{gcs@restrict@boundingbox}
 \newcommand*\gcs@restrictboundingbox[1]{
-  \ifbool{gcs@restrict@boundingbox}
+    \ifbool{gcs@restrict@boundingbox}
     {
-      \ifnumequal{\gcs@string@number}{1}
+        \ifnumequal{\gcs@string@number}{1}
         {\useasboundingbox (0,-.4) --++ (1.5*\csname gcs@#1@fret@number\endcsname,.8) ; }
         {
-          \useasboundingbox
+            \useasboundingbox
             (bass)
             rectangle
             (1.5*\csname gcs@#1@fret@number\endcsname,{.8*(\gcs@string@number-1)}) ;
@@ -100,33 +93,31 @@
 }
 
 \pgfkeys{
-  gtabs/.cd ,
+    gtabs/.cd ,
     x-unit/.code              = \def\gcs@x@unit{#1} ,
     y-unit/.code              = \def\gcs@y@unit{#1} ,
     rotate/.code              = \def\gcs@angle{#1} ,
     strings/.code             = \gcs@setstringnumber{#1} ,
     finger-format/.code       = \def\gcs@finger@font{#1} ,
     finger-format+/.code      =
-      \expandafter\def\expandafter\gcs@finger@font
-      \expandafter{\gcs@finger@font#1} ,
+    \expandafter\def\expandafter\gcs@finger@font
+    \expandafter{\gcs@finger@font#1} ,
     position-format/.code     = \def\gcs@position@font{#1} ,
     position-format+/.code    =
-      \expandafter\def\expandafter\gcs@position@font
-      \expandafter{\gcs@position@font#1} ,
+    \expandafter\def\expandafter\gcs@position@font
+    \expandafter{\gcs@position@font#1} ,
     chord-frets/.code         =
-      \ifnumless{#1}{4}
-        {%
-          \gcs@warning{You cannot use less than 4 frets for a chord!}%
-          \def\gcs@chordscheme@fret@number{4}%
-        }
-        {\def\gcs@chordscheme@fret@number{#1}} ,
+    \ifnumless{#1}{4}
+    {%
+        \gcs@warning{You cannot use less than 4 frets for a chord!}%
+        \def\gcs@chordscheme@fret@number{4}%
+    }
+    {\def\gcs@chordscheme@fret@number{#1}} ,
     line-width/.code          = \def\gcs@line@width{#1} ,
     finger-radius/.code       = \def\gcs@finger@radius{#1} ,
     finger-x-offset/.code     = \def\gcs@finger@x@offset{#1} ,
     finger-y-offset/.code     = \def\gcs@finger@y@offset{#1} ,
     finger-style/.code        = \tikzset{finger style/.style={#1}} ,
-    root-style/.code          = \tikzset{root style/.style={#1}} ,
-    show-root-style/.code     = \tikzset{show root style/.style={#1}} ,
     ringing-style/.code       = \tikzset{ringing style/.style={#1}} ,
     muted-style/.code         = \tikzset{muted style/.style={#1}} ,
     restrict-bounding-box/.is if = gcs@restrict@boundingbox
@@ -137,11 +128,9 @@
 
 % some defaults -- need to be set before options are processed:
 \setchordscheme{
-  muted-style     = {cross out,draw} ,
-  root-style      = {fill} ,
-  show-root-style = {draw} ,
-  ringing-style   = {draw} ,
-  finger-style    = {fill}
+    muted-style     = {cross out,draw} ,
+    ringing-style   = {draw} ,
+    finger-style    = {fill}
 }
 
 \ProcessPgfOptions*
@@ -149,31 +138,29 @@
 % --------------------------------------------------------------------------
 % settings for the whole scheme:
 \tikzset{
-  gcs/finger/.style =
-    {
-      xshift = \gcs@finger@x@offset*\gcs@x@unit ,
-      yshift = \gcs@finger@y@offset*\gcs@y@unit ,
-      font   = \gcs@finger@font
-    }
+    gcs/finger/.style =
+        {
+            xshift = \gcs@finger@x@offset*\gcs@x@unit ,
+            yshift = \gcs@finger@y@offset*\gcs@y@unit ,
+            font   = \gcs@finger@font
+        }
 }
 
 % setting a chord scheme:
 \pgfkeys{
-  gcs/chord/.cd ,
+    gcs/chord/.cd ,
     position/.code  = \def\gcs@chord@position{#1} ,
     finger/.code    = \gcs@chord@finger{#1} ,
-    root/.code      = \gcs@chord@root{#1} ,
-    show-root/.code = \gcs@chord@show@root{#1} ,
     mute/.code      = \gcs@chord@mute{#1} ,
     ring/.code      = \gcs@chord@ring{#1} ,
     barre/.code     = \gcs@chord@barre{#1} ,
     fret-number/.code  =
-      \ifnumless{#1}{4}
-        {%
-          \gcs@warning{You cannot use less than 4 frets for a chord!}%
-          \def\gcs@chordscheme@fret@number{4}%
-        }
-        {\def\gcs@chordscheme@fret@number{#1}}
+    \ifnumless{#1}{4}
+    {%
+        \gcs@warning{You cannot use less than 4 frets for a chord!}%
+        \def\gcs@chordscheme@fret@number{4}%
+    }
+    {\def\gcs@chordscheme@fret@number{#1}}
 }
 
 % --------------------------------------------------------------------------
@@ -182,188 +169,159 @@
 % placing fingers:
 %   <fret>/<string>:<finger>
 \newrobustcmd*\gcs@chord@finger[1]{%
-  \foreach \gcs@finger@spec in {#1}
-    {
-      \expandafter\gcs@get@finger@data\gcs@finger@spec::\q@stop
-      \ifdefvoid\gcs@finger@x
-        {\gcs@missing@date@error{finger}{position}}
+    \foreach \gcs@finger@spec in {#1}
         {
-          \pgfmathsetmacro\gcs@finger@fret{1.5*\gcs@finger@x-0.75}
-          \ifdefvoid\gcs@finger@y
-            {\gcs@missing@date@error{finger}{string}}
+            \expandafter\gcs@get@finger@data\gcs@finger@spec::\q@stop
+            \ifdefvoid\gcs@finger@x
+            {\gcs@missing@date@error{finger}{position}}
             {
-              \pgfmathsetmacro\gcs@finger@string{(\gcs@string@number-\gcs@finger@y)*4/5}
-              \draw[finger style]
-                (\gcs@finger@fret,\gcs@finger@string)
-                circle
-                (\gcs@finger@radius*\gcs@x@unit) ;
-              \node[gcs/finger]
-                at (\gcs@finger@fret,\gcs@finger@string)
-                {\gcs@finger@number} ;
+                \pgfmathsetmacro\gcs@finger@fret{1.5*\gcs@finger@x-0.75}
+                \ifdefvoid\gcs@finger@y
+                {\gcs@missing@date@error{finger}{string}}
+                {
+                    \pgfmathsetmacro\gcs@finger@string{(\gcs@string@number-\gcs@finger@y)*4/5}
+                    \draw[finger style]
+                    (\gcs@finger@fret,\gcs@finger@string)
+                    circle
+                    (\gcs@finger@radius*\gcs@x@unit) ;
+                    \node[gcs/finger]
+                    at (\gcs@finger@fret,\gcs@finger@string)
+                    {\gcs@finger@number} ;
+                }
             }
         }
-    }
 }
 \let\gcs@scales@finger\gcs@chord@finger
 
 \gcs@def\gcs@get@finger@data#1/#2:#3:#4\q@stop{%
-  \def\gcs@finger@x{#1}%
-  \def\gcs@finger@y{#2}%
-  \def\gcs@finger@number{#3}%
+    \def\gcs@finger@x{#1}%
+    \def\gcs@finger@y{#2}%
+    \def\gcs@finger@number{#3}%
 }
 
 % placing a barre:
 %   <fret>/<string>-<string>:<finger>
 \newrobustcmd*\gcs@chord@barre[1]{%
-  \foreach \gcs@barre@spec in {#1}
-    {
-      \expandafter\gcs@get@barre@data\gcs@barre@spec::\q@stop
-      \ifdefvoid\gcs@barre@x
-        {\gcs@missing@date@error{barre}{position}}
-        {\pgfmathsetmacro\gcs@barre@fret{1.5*\gcs@barre@x-0.75}}
-      \ifdefvoid\gcs@barre@fromto
-        {\gcs@missing@date@error{barre}{string range}}
+    \foreach \gcs@barre@spec in {#1}
         {
-          \expandafter\gcs@barre@getstrings\gcs@barre@fromto--\q@stop
-          \pgfmathsetmacro\gcs@barre@lower@string{(\gcs@string@number-\gcs@barre@lower@y)*4/5}
-          \pgfmathsetmacro\gcs@barre@upper@string{(\gcs@string@number-\gcs@barre@upper@y)*4/5}
-          \draw[finger style,round cap-round cap,line width=2*\gcs@finger@radius*\gcs@x@unit]
-            (\gcs@barre@fret,\gcs@barre@lower@string) node[gcs/finger] {\gcs@barre@finger}
-            ++ (0,\gcs@finger@radius*\gcs@x@unit)
-            --
-            ($(\gcs@barre@fret,\gcs@barre@upper@string)+(0,-\gcs@finger@radius*\gcs@x@unit)$)
-          ;
+            \expandafter\gcs@get@barre@data\gcs@barre@spec::\q@stop
+            \ifdefvoid\gcs@barre@x
+            {\gcs@missing@date@error{barre}{position}}
+            {\pgfmathsetmacro\gcs@barre@fret{1.5*\gcs@barre@x-0.75}}
+            \ifdefvoid\gcs@barre@fromto
+            {\gcs@missing@date@error{barre}{string range}}
+            {
+                \expandafter\gcs@barre@getstrings\gcs@barre@fromto--\q@stop
+                \pgfmathsetmacro\gcs@barre@lower@string{(\gcs@string@number-\gcs@barre@lower@y)*4/5}
+                \pgfmathsetmacro\gcs@barre@upper@string{(\gcs@string@number-\gcs@barre@upper@y)*4/5}
+                \draw[finger style,round cap-round cap,line width=2*\gcs@finger@radius*\gcs@x@unit]
+                (\gcs@barre@fret,\gcs@barre@lower@string) node[gcs/finger] {\gcs@barre@finger}
+                ++ (0,\gcs@finger@radius*\gcs@x@unit)
+                --
+                ($(\gcs@barre@fret,\gcs@barre@upper@string)+(0,-\gcs@finger@radius*\gcs@x@unit)$)
+                ;
+            }
         }
-    }
 }
 
 \gcs@def\gcs@get@barre@data#1/#2:#3:#4\q@stop{%
-  \def\gcs@barre@x{#1}%
-  \def\gcs@barre@fromto{#2}%
-  \def\gcs@barre@finger{#3}%
+    \def\gcs@barre@x{#1}%
+    \def\gcs@barre@fromto{#2}%
+    \def\gcs@barre@finger{#3}%
 }
 
 \gcs@def\gcs@barre@getstrings#1-#2-#3\q@stop{%
-  \ifx#3-\relax
-    \def\gcs@barre@lower@y{#1}%
-    \def\gcs@barre@upper@y{#2}%
-  \else
-    \gcs@error
-      {barre: wrong string range syntax}
-      {barre: wrong string range syntax}%
-  \fi
-}
-
-% placing root fingers:
-%   <fret>/<string>:<finger>
-\newrobustcmd*\gcs@chord@root[1]{%
-  \foreach \gcs@finger@spec in {#1}
-    {
-      \expandafter\gcs@get@finger@data\gcs@finger@spec::\q@stop
-      \ifdefvoid\gcs@finger@x
-        {\gcs@missing@date@error{root}{position}}
-        {
-          \pgfmathsetmacro\gcs@finger@fret{1.5*\gcs@finger@x-0.75}
-          \ifdefvoid\gcs@finger@y
-            {\gcs@missing@date@error{root}{string}}
-            {
-              \pgfmathsetmacro\gcs@finger@string{(\gcs@string@number-\gcs@finger@y)*4/5}
-              \node[minimum size=2*\gcs@finger@radius*\gcs@x@unit,inner sep=0pt,root style]
-                at (\gcs@finger@fret,\gcs@finger@string) {} ;
-              \node[gcs/finger]
-                at (\gcs@finger@fret,\gcs@finger@string)
-                {\gcs@finger@number} ;
-            }
-        }
-    }
-}
-\let\gcs@scales@root\gcs@chord@root
-
-% placing ghost roots:
-%   <fret>/<string>
-\newrobustcmd*\gcs@chord@show@root[1]{%
-  \foreach \gcs@finger@spec in {#1}
-    {
-      \expandafter\gcs@get@finger@data\gcs@finger@spec::\q@stop
-      \ifdefvoid\gcs@finger@x
-        {\gcs@missing@date@error{show-root}{position}}
-        {
-          \pgfmathsetmacro\gcs@finger@fret{1.5*\gcs@finger@x-0.75}
-          \ifdefvoid\gcs@finger@x
-            {\gcs@missing@date@error{show-root}{string}}
-            {
-              \pgfmathsetmacro\gcs@finger@string{(\gcs@string@number-\gcs@finger@y)*4/5}
-              \node[
-                minimum size=2*\gcs@finger@radius*\gcs@x@unit,
-                inner sep=0pt,
-                show root style]
-                at (\gcs@finger@fret,\gcs@finger@string) {} ;
-            }
-        }
-    }
+    \ifx#3-\relax
+        \def\gcs@barre@lower@y{#1}%
+        \def\gcs@barre@upper@y{#2}%
+    \else
+        \gcs@error
+        {barre: wrong string range syntax}
+        {barre: wrong string range syntax}%
+    \fi
 }
 
 % muted strings:
 \newrobustcmd*\gcs@chord@mute[1]{%
-  \foreach \muted@string in {#1}
-    {
-      \pgfmathsetmacro\muted@string@pos{(6-\muted@string)*4/5}
-      \node[muted style] at (0,\muted@string@pos) {} ;
-    }
+    \foreach \muted@string in {#1}
+        {
+            \pgfmathsetmacro\muted@string@pos{(6-\muted@string)*4/5}
+            \node[muted style] at (-1,\muted@string@pos) {} ;
+        }
 }
 
 % ringing strings:
 \newrobustcmd*\gcs@chord@ring[1]{%
-  \foreach \ringing@string in {#1}
-    {
-      \pgfmathsetmacro\ringing@string@pos{(\gcs@string@number-\ringing@string)*4/5}
-      \draw[ringing style]
-        (0,\ringing@string@pos) circle (\gcs@finger@radius*\gcs@x@unit) ;
-    }
+    \foreach \ringing@string in {#1}
+        {
+            \pgfmathsetmacro\ringing@string@pos{(\gcs@string@number-\ringing@string)*4/5}
+            \draw[ringing style]
+            (-1,\ringing@string@pos) circle (\gcs@finger@radius*\gcs@x@unit) ;
+        }
 }
 
 % --------------------------------------------------------------------------
 % the chord scheme command:
 \newrobustcmd*\gcs@chordscheme[1]{%
-  \begingroup
+    \begingroup
     \begin{tikzpicture}[
-       x=\gcs@x@unit,
-       y=\gcs@y@unit,
-       line width=\gcs@line@width,
-       baseline=(bass)
-     ]
-     \begin{scope}[rotate=\gcs@angle,local bounding box=diagram]
-     \coordinate (bass) at (0,0) ;
-     \gcs@restrictboundingbox{chordscheme}
-     \pgfqkeys{/gcs/chord}{#1}%
-     \foreach \fretnumber
-       in {0,...,\gcs@chordscheme@fret@number}
-       {
-         \ifnumequal{\gcs@string@number}{1}
-           { \draw (1.5*\fretnumber,-.4) --++ (0,.8) ; }
-           { \draw (1.5*\fretnumber,0) -- ++(0,{.8*(\gcs@string@number-1)}) ; }
-       }
-     \foreach \gcs@string in {1,...,\gcs@string@number}
-       {
-         \draw
-           (0,{.8*(\gcs@string@number-\gcs@string)})
-           node[transform shape,
-           label={[text height=1.5ex,text depth=.2ex]left:%
-             \gcs@string@name@format\csuse{guitar@string@\gcs@string}}] {}
-           --++(1.5*\gcs@chordscheme@fret@number,0) ;
-       }
-     \ifdefvoid\gcs@chord@position
-       {}
-       {
-         \draw
-           (.75,{0.1*(\gcs@string@number-1)})
-           node[transform shape,
-           label={[text height=1.5ex, font=\gcs@position@font]%
-             below:\gcs@chord@position}] {} ;
-       }
-     \end{scope}
-   \end{tikzpicture}
-  \endgroup
+            x=\gcs@x@unit,
+            y=\gcs@y@unit,
+            line width=\gcs@line@width,
+            baseline=(bass)
+        ]
+        \begin{scope}[rotate=\gcs@angle,local bounding box=diagram]
+            \coordinate (bass) at (0,0) ;
+            \gcs@restrictboundingbox{chordscheme}
+            \pgfqkeys{/gcs/chord}{#1}%
+            \foreach \fretnumber
+            in {0,...,\gcs@chordscheme@fret@number}
+            {
+                \ifnumequal{\gcs@string@number}{1}
+                {
+                    \draw (1.5*\fretnumber,-.4) --++ (0,.8) ;
+                }
+                {
+                    \ifnumequal{\fretnumber}{0}
+                    {
+                        \ifdefvoid\gcs@chord@position
+                        {
+                            \draw[ultra thick] (1.5*\fretnumber-0.1,-0.025) -- ++(0,{.8*(\gcs@string@number-1) + 0.05}) ;
+                        }
+                        {
+                            \draw (1.5*\fretnumber,-0.025) -- ++(0,{.8*(\gcs@string@number-1) + 0.05}) ;
+                        }
+                    }
+                    {
+                        \ifnumequal{\fretnumber}{\gcs@chordscheme@fret@number}
+                        {}
+                        {
+                            \draw (1.5*\fretnumber,-0.025) -- ++(0,{.8*(\gcs@string@number-1) + 0.05}) ;
+                        }
+                    }
+                }
+            }
+            \foreach \gcs@string in {1,...,\gcs@string@number}
+            {
+                \draw
+                (0,{.8*(\gcs@string@number-\gcs@string)})
+                node[transform shape,
+                    label={[text height=1.5ex,text depth=.2ex]left:%
+                            \gcs@string@name@format\csuse{guitar@string@\gcs@string}}] {}
+                --++(1.5*\gcs@chordscheme@fret@number,0) ;
+            }
+            \ifdefvoid\gcs@chord@position
+            {}
+            {
+                \draw
+                (.75,{0.1*(\gcs@string@number-1)})
+                node[transform shape,
+                    label={[text height=1.5ex, font=\gcs@position@font]%
+                            below:\gcs@chord@position}] {} ;
+            }
+        \end{scope}
+    \end{tikzpicture}
+    \endgroup
 }
 
 % --------------------------------------------------------------------------
@@ -373,25 +331,16 @@
 % --------------------------------------------------------------------------
 % the symbols for use outside of a scheme:
 \newrobustcmd*\gcs@fingersymbol{%
-  \tikz\draw[finger style] (0,0) circle (\gcs@finger@radius*\gcs@x@unit);}
-
-\newrobustcmd*\rootsymbol{%
-  \tikz\node[root style,minimum size=2*\gcs@finger@radius*\gcs@x@unit] at (0,0) {} ;}
-
-\newrobustcmd*\showrootsymbol{%
-  \tikz\node[
-    show root style,
-    minimum size=2*\gcs@finger@radius*\gcs@x@unit,
-    line width=\gcs@line@width] at (0,0) {} ;}
+    \tikz\draw[finger style] (0,0) circle (\gcs@finger@radius*\gcs@x@unit);}
 
 \newrobustcmd*\ringingstring{%
-  \tikz\draw[
-    ringing style,
-    line width=\gcs@line@width] (0,0) circle (\gcs@finger@radius*\gcs@x@unit);}
+    \tikz\draw[
+        ringing style,
+        line width=\gcs@line@width] (0,0) circle (\gcs@finger@radius*\gcs@x@unit);}
 
 \newrobustcmd*\mutedstring{%
-  \tikz\node[
-    muted style,
-    line width=\gcs@line@width] at (0,0) {};}
+    \tikz\node[
+        muted style,
+        line width=\gcs@line@width] at (0,0) {};}
 
 \endinput
