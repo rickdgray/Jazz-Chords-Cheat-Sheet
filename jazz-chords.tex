@@ -23,16 +23,14 @@
     y-unit=2.75mm,
     line-width = 0.4pt,
     finger-radius = .5,
-    % position = {<tex code>},
-    % ringing-style = {draw, fill = red},
     muted-style = {cross out, draw, scale = 0.65}
 }
 
 \begin{document}
-
 {
 \centering
-\begin{tabular}{ p{2.9cm} p{1cm} p{3.15cm} p{1.75cm} p{4.25cm} p{1.6cm} p{1.9cm} }
+\setlength\tabcolsep{0pt}
+\begin{tabular}{ p{3.1cm} p{1cm} p{4.5cm} p{1.75cm} p{4.25cm} p{1.6cm} p{3.2cm} }
     \multicolumn{7}{c}{\Huge{Jazz Chords in C}} \\
     \hline
         \makecell[cl]{
@@ -41,9 +39,30 @@
             Cmin\textsuperscript{7} \\
             Cm\textsuperscript{7} \\
             C\textminus\textsuperscript{7}} &
-        \makecell[cl]{
-            Minor Seventh \\
-            Minor Triad} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{m3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{m7} & & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{1.6cm}}$
+                        }
+                    } & & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{Minor Triad}
+                        }
+                    } & & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -65,9 +84,30 @@
             \textcolor{red}{Dominant Seventh}} &
         \makecell[cl]{
             C\textsuperscript{7}} &
-        \makecell[cl]{
-            Minor Seventh \\
-            Major Triad} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{M3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{m7} & & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{1.6cm}}$
+                        }
+                    } & & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{Major Triad}
+                        }
+                    } & & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -86,9 +126,7 @@
                     ring = 1
                 ]} &
         \makecell[cl]{
-            \footnotesize{C\textsuperscript{7$\flat$5}: dim 5\textsuperscript{th}} \\
             \footnotesize{C\textsuperscript{7\textminus5}: dim 5\textsuperscript{th}} \\
-            \footnotesize{C\textsuperscript{7$\sharp$5}: aug 5\textsuperscript{th}} \\
             \footnotesize{C\textsuperscript{7+5}: aug 5\textsuperscript{th}} \\
         } \\
     \hline
@@ -98,9 +136,30 @@
             Cmaj\textsuperscript{7} \\
             CM\textsuperscript{7} \\
             C$\Delta$\textsuperscript{7}} &
-        \makecell[cl]{
-            Major Seventh \\
-            Major Triad} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{M3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{M7} & & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B}} & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{1.6cm}}$
+                        }
+                    } & & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{Major Triad}
+                        }
+                    } & & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -121,9 +180,30 @@
             Major Sixth} &
         \makecell[cl]{
             C\textsuperscript{6}} &
-        \makecell[cl]{
-            Major Sixth \\
-            Major Triad} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{M3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{M6} & & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{D}} & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{1.6cm}}$
+                        }
+                    } & & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{Major Triad}
+                        }
+                    } & & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -151,10 +231,16 @@
         \makecell[cl]{
             C\textsuperscript{o} \\
             Cdim} &
-        \makecell[cl]{
-            Diminished Fifth \\
-            Minor Third \\
-            Root} &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{0.7cm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{m3} &
+                \makecell[cc]{d5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                \makecell[cc]{\textbf{G\textsuperscript{$\sharp$}}} & & & \\
+            \end{tabular}
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -173,8 +259,7 @@
                 mute = {1,6}
             ]} &
         \makecell[cl]{
-            \footnotesize{interchangable} \\
-            \footnotesize{with C\textsuperscript{o7}}
+            \footnotesize{interchangable with C\textsuperscript{o7}}
         } \\
     \hline
         \makecell[cl]{
@@ -183,9 +268,30 @@
         \makecell[cl]{
             C\textsuperscript{o7} \\
             Cdim\textsuperscript{7}} &
-        \makecell[cl]{
-            Diminished Seventh \\
-            \textcolor{orange}{Diminished}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{m3} &
+                    \makecell[cc]{d5} &
+                    \makecell[cc]{d7} & & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{G\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat\flat$}}} & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{1.6cm}}$
+                        }
+                    } & & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor{orange}{Diminished}}
+                        }
+                    } & & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -204,8 +310,7 @@
                 mute = {1,2},
             ]} &
         \makecell[cl]{
-            \footnotesize{interchangable} \\
-            \footnotesize{with C\textsuperscript{o}}
+            \footnotesize{interchangable with C\textsuperscript{o}}
         } \\
     \hline
         \makecell[cl]{
@@ -215,9 +320,30 @@
             C\textsuperscript{\o{}7} \\
             Cm\textsuperscript{7$\flat$5} \\
             C\textminus\textsuperscript{7$\flat$5}} &
-        \makecell[cl]{
-            Minor Seventh \\
-            \textcolor{orange}{Diminished}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{m3} &
+                    \makecell[cc]{d5} &
+                    \makecell[cc]{m7} & & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{G\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{1.6cm}}$
+                        }
+                    } & & & \\
+                    \multicolumn{3}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor{orange}{Diminished}}
+                        }
+                    } & & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -236,19 +362,40 @@
                 mute = 6
             ]} &
         \makecell[cl]{
-            \footnotesize{can also be} \\
-            \footnotesize{thought of as} \\
-            \footnotesize{Cm\textsuperscript{7} with a} \\
-            \footnotesize{dim 5\textsuperscript{th}}
+            \footnotesize{can also be thought of} \\
+            \footnotesize{as Cm\textsuperscript{7} with a dim 5\textsuperscript{th}} \\
         } \\
     \hline
         \makecell[cl]{
             Minor Ninth} &
         \makecell[cl]{
             Cm\textsuperscript{9}} &
-        \makecell[cl]{
-            Major Ninth \\
-            \textcolor{blue}{Minor Seventh}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{m3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{m7} &
+                    \makecell[cc]{M9} & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{D}} & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{2.3cm}}$
+                        }
+                    } & & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor{blue}{Minor Seventh}}
+                        }
+                    } & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -271,9 +418,32 @@
             \textcolor[RGB]{80,0,150}{Dominant Ninth}} &
         \makecell[cl]{
             C\textsuperscript{9}} &
-        \makecell[cl]{
-            Major Ninth \\
-            \textcolor{red}{Dominant Seventh}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{M3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{m7} &
+                    \makecell[cc]{M9} & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{D}} & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{2.3cm}}$
+                        }
+                    } & & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor{red}{Dominant Seventh}}
+                        }
+                    } & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -299,9 +469,32 @@
             Major Ninth} &
         \makecell[cl]{
             Cmaj\textsuperscript{9}} &
-        \makecell[cl]{
-            Major Ninth \\
-            \textcolor[RGB]{0,150,20}{Major Seventh}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{M3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{M7} &
+                    \makecell[cc]{M9} & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B}} &
+                    \makecell[cc]{\textbf{D}} & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{2.3cm}}$
+                        }
+                    } & & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor[RGB]{0,150,20}{Major Seventh}}
+                        }
+                    } & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -323,9 +516,32 @@
             Eleventh} &
         \makecell[cl]{
             C\textsuperscript{11}} &
-        \makecell[cl]{
-            Perfect Eleventh \\
-            \textcolor[RGB]{80,0,150}{Dominant Ninth}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{m7} &
+                    \makecell[cc]{M9} &
+                    \makecell[cc]{11} & \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{D}} &
+                    \makecell[cc]{\textbf{F}} & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{2.3cm}}$
+                        }
+                    } & & \\
+                    \multicolumn{4}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor[RGB]{80,0,150}{Dominant Ninth}}
+                        }
+                    } & & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -341,18 +557,41 @@
             ]} &
         \makecell[cl]{
             \footnotesize{omit 3\textsuperscript{rd}} \\
-            \footnotesize{opt. 1\textsuperscript{st}} \\
-            \footnotesize{opt. 5\textsuperscript{th}} \\
-            \footnotesize{opt. 9\textsuperscript{th}}
+            \footnotesize{optional 1\textsuperscript{st}, 5\textsuperscript{th}, 9\textsuperscript{th}} \\
         } \\
     \hline
         \makecell[cl]{
             Thirteenth} &
         \makecell[cl]{
             C\textsuperscript{13}} &
-        \makecell[cl]{
-            Major Thirteenth \\
-            \textcolor[RGB]{80,0,150}{Dominant Ninth}} &
+        \makecell[cc]{
+            \raisebox{-0.4\normalbaselineskip}[0pt][0pt]{
+                \begin{tabular}{ *{6}{p{0.7cm}} }
+                    \makecell[cc]{1} &
+                    \makecell[cc]{M3} &
+                    \makecell[cc]{5} &
+                    \makecell[cc]{m7} &
+                    \makecell[cc]{M9} &
+                    \makecell[cc]{M13} \\
+                    \makecell[cc]{\textbf{C}} &
+                    \makecell[cc]{\textbf{E}} &
+                    \makecell[cc]{\textbf{G}} &
+                    \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} &
+                    \makecell[cc]{\textbf{D}} &
+                    \makecell[cc]{\textbf{A}} \\
+                    \multicolumn{5}{ c }{
+                        \raisebox{0.9\normalbaselineskip}[0pt][0pt]{
+                            $\underbrace{\hspace*{3cm}}$
+                        }
+                    } & \\
+                    \multicolumn{5}{ c }{
+                        \raisebox{0.8\normalbaselineskip}[0pt][0pt]{
+                            \footnotesize{\textcolor[RGB]{80,0,150}{Dominant Ninth}}
+                        }
+                    } & \\
+                \end{tabular}
+            }
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -371,9 +610,7 @@
                 mute = {1,5}
             ]} &
         \makecell[cl]{
-            \footnotesize{opt. 1\textsuperscript{st}} \\
-            \footnotesize{opt. 5\textsuperscript{th}} \\
-            \footnotesize{opt. 9\textsuperscript{th}}
+            \footnotesize{optional 1\textsuperscript{st}, 5\textsuperscript{th}, 9\textsuperscript{th}} \\
         } \\
     \hline
         \makecell[cl]{
@@ -382,10 +619,16 @@
             C\textsuperscript{+} \\
             Caug \\
             C\textsuperscript{$\sharp$5}} &
-        \makecell[cl]{
-            Augmented Fifth \\
-            Major Third \\
-            Root} &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{0.7cm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M3} &
+                \makecell[cc]{d5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E}} &
+                \makecell[cc]{\textbf{G\textsuperscript{$\sharp$}}} & & & \\
+            \end{tabular}
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -404,8 +647,7 @@
                 ring = 1
             ]} &
         \makecell[cl]{
-            \footnotesize{Caug\textsuperscript{7} is} \\
-            \footnotesize{identical to} \\
+            \footnotesize{Caug\textsuperscript{7} is identical to} \\
             \footnotesize{C\textsuperscript{7+5}}
         } \\
     \hline
@@ -413,10 +655,16 @@
             Suspended} &
         \makecell[cl]{
             Csus2} &
-        \makecell[cl]{
-            Perfect Fifth \\
-            Major Second \\
-            Root} &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{0.7cm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M2} &
+                \makecell[cc]{5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{D}} &
+                \makecell[cc]{\textbf{G}} & & & \\
+            \end{tabular}
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
@@ -438,10 +686,16 @@
             Suspended} &
         \makecell[cl]{
             Csus4 } &
-        \makecell[cl]{
-            Perfect Fifth \\
-            Perfect Forth \\
-            Root} &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{0.7cm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{4} &
+                \makecell[cc]{5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{F}} &
+                \makecell[cc]{\textbf{G}} & & & \\
+            \end{tabular}
+        } &
         \makecell[cc]{
             \raisebox{0ex}[5ex][1ex]{
                 \musicintext{\staffbotmarg2\Interligne
