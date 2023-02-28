@@ -10,11 +10,13 @@
 \usepackage{gtabs}
 \usepackage{tikz}
 
-\def\musicintext#1{
-  {\let\extractline\relax
-   \nobarnumbers
-   \staffbotmarg0pt
-   \startextract\addspace{-\afterruleskip}\qsk#1\endextract}}
+\newcommand*{\musicintext}[1]{
+    \let\extractline\relax
+    \nobarnumbers\staffbotmarg0pt
+    \startextract\addspace{-\afterruleskip}\qsk
+    \staffbotmarg2\Interligne\Notes#1\en
+    \endextract
+}
 
 \setchordscheme{
     rotate = -90,
@@ -71,10 +73,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\accshift=0.6mm\zw{_e}\accshift=0mm\zw{g}\zw{_i}\en
-            }
+            \musicintext{\zw{c}\accshift=0.6mm\zw{_e}\accshift=0mm\zw{g}\zw{_i}}
         }
     } &
     \makecell[cc]{
@@ -125,10 +124,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\zw{_i}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{g}\zw{_i}}
         }
     } &
     \makecell[cc]{
@@ -185,10 +181,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\zw{i}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{g}\zw{i}}
         }
     } &
     \makecell[cc]{
@@ -238,10 +231,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\qsk\zw{h}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{g}\qsk\zw{h}}
         }
     } &
     \makecell[cc]{
@@ -283,10 +273,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \hqsk\zw{c}\accshift=1.4mm\zw{_e}\accshift=0mm\zw{_g}\en
-            }
+            \musicintext{\hqsk\zw{c}\accshift=1.4mm\zw{_e}\accshift=0mm\zw{_g}}
         }
     } &
     \makecell[cc]{
@@ -343,10 +330,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \qsk\zw{c}\accshift=0.4mm\zw{_e}\accshift=2.8mm\zw{_g}\accshift=0mm\zw{<i}\en
-            }
+            \musicintext{\qsk\zw{c}\accshift=0.4mm\zw{_e}\accshift=2.8mm\zw{_g}\accshift=0mm\zw{<i}}
         }
     } &
     \makecell[cc]{
@@ -404,10 +388,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \tqsk\zw{c}\accshift=0.4mm\zw{_e}\accshift=2.2mm\zw{_g}\accshift=0mm\zw{_i}\en
-            }
+            \musicintext{\tqsk\zw{c}\accshift=0.4mm\zw{_e}\accshift=2.2mm\zw{_g}\accshift=0mm\zw{_i}}
         }
     } &
     \makecell[cc]{
@@ -465,10 +446,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\accshift=0.6mm\zw{_e}\accshift=0mm\zw{g}\zw{_i}\zw{k}\en
-            }
+            \musicintext{\zw{c}\accshift=0.6mm\zw{_e}\accshift=0mm\zw{g}\zw{_i}\zw{k}}
         }
     } &
     \makecell[cc]{
@@ -521,10 +499,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\zw{_i}\zw{k}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{g}\zw{_i}\zw{k}}
         }
     } &
     \makecell[cc]{
@@ -581,10 +556,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\zw{i}\zw{k}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{g}\zw{i}\zw{k}}
         }
     } &
     \makecell[cc]{
@@ -636,10 +608,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{g}\zw{_i}\zw{k}\zw{m}\en
-            }
+            \musicintext{\zw{c}\zw{g}\zw{_i}\zw{k}\zw{m}}
         }
     } &
     \makecell[cc]{
@@ -694,10 +663,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{g}\zw{_i}\zw{k}\zw{o}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{g}\zw{_i}\zw{k}\zw{o}}
         }
     } &
     \makecell[cc]{
@@ -739,10 +705,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{e}\zw{^g}\en
-            }
+            \musicintext{\zw{c}\zw{e}\zw{^g}}
         }
     } &
     \makecell[cc]{
@@ -783,10 +746,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{g}\qsk\zw{d}\en
-            }
+            \musicintext{\zw{c}\zw{g}\qsk\zw{d}}
         }
     } &
     \makecell[cc]{
@@ -822,10 +782,7 @@
     } &
     \makecell[cc]{
         \raisebox{0ex}[5ex][1ex]{
-            \musicintext{
-                \staffbotmarg2\Interligne
-                \Notes \zw{c}\zw{f}\qsk\zw{g}\en
-            }
+            \musicintext{\zw{c}\zw{f}\qsk\zw{g}}
         }
     } &
     \makecell[cc]{
