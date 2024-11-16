@@ -1,0 +1,357 @@
+\documentclass{article}
+\usepackage[newdimens]{labels}
+
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tikz}
+
+\renewcommand{\normalsize}{\fontsize{5pt}{6pt}\selectfont}
+\renewcommand{\small}{\fontsize{5pt}{6pt}\selectfont}
+\renewcommand{\large}{\fontsize{5pt}{6pt}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{5pt}{6pt}\selectfont}
+
+\setlength{\extrarowheight}{4pt}
+
+\numberoflabels=9
+
+\LabelInfotrue
+\LabelGridtrue
+
+% 55 x 85
+
+\LabelCols=3
+\LabelRows=3
+
+\LeftPageMargin=18mm
+\RightPageMargin=18mm
+\TopPageMargin=8mm
+\BottomPageMargin=8mm
+
+\InterLabelColumn=2mm
+\InterLabelRow=2mm
+
+\LeftLabelBorder=1mm
+\RightLabelBorder=1mm
+\TopLabelBorder=0mm
+\BottomLabelBorder=0mm
+
+\begin{document}
+
+\setlength\tabcolsep{0pt}
+
+\genericlabel{
+    \begin{tabular}{ p{15mm} p{8mm} p{32mm} }
+        \makecell[cl]{
+            \textcolor{blue}{Minor} \\
+            \textcolor{blue}{Seventh}
+        } &
+        \makecell[cl]{
+            Cmin\textsuperscript{7} \\
+            Cm\textsuperscript{7} \\
+            C\textminus\textsuperscript{7}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{m3} &
+                \makecell[cc]{5} &
+                \makecell[cc]{m7} & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                \makecell[cc]{\textbf{G}} &
+                \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            \textcolor{red}{Dominant} \\
+            \textcolor{red}{Seventh}
+        } &
+        \makecell[cl]{
+            C\textsuperscript{7}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M3} &
+                \makecell[cc]{5} &
+                \makecell[cc]{m7} & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E}} &
+                \makecell[cc]{\textbf{G}} &
+                \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            \textcolor[RGB]{0,150,20}{Major} \\
+            \textcolor[RGB]{0,150,20}{Seventh}
+        } &
+        \makecell[cl]{
+            Cmaj\textsuperscript{7} \\
+            CM\textsuperscript{7} \\
+            C$\Delta$\textsuperscript{7}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M3} &
+                \makecell[cc]{5} &
+                \makecell[cc]{M7} & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E}} &
+                \makecell[cc]{\textbf{G}} &
+                \makecell[cc]{\textbf{B}} & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Major \\
+            Sixth
+        } &
+        \makecell[cl]{
+            C\textsuperscript{6}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M3} &
+                \makecell[cc]{5} &
+                \makecell[cc]{M6} & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E}} &
+                \makecell[cc]{\textbf{G}} &
+                \makecell[cc]{\textbf{D}} & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            \textcolor{orange}{Diminished}
+        } &
+        \makecell[cl]{
+            C\textsuperscript{o} \\
+            Cdim
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{m3} &
+                \makecell[cc]{d5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E\textsuperscript{$\flat$}}} &
+                \makecell[cc]{\textbf{G\textsuperscript{$\flat$}}} & & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Fully \\
+            Diminished \\
+            Seventh
+        } &
+        \makecell[cl]{
+            C\textsuperscript{o7} \\
+            Cdim\textsuperscript{7}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor{orange}{1}} &
+                \makecell[cc]{\textcolor{orange}{m3}} &
+                \makecell[cc]{\textcolor{orange}{d5}} &
+                \makecell[cc]{d7} & & \\
+                \makecell[cc]{\textbf{\textcolor{orange}{C}}} &
+                \makecell[cc]{\textbf{\textcolor{orange}{E\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{\textcolor{orange}{G\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{B\textsuperscript{$\flat\flat$}}} & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Half \\
+            Diminished \\
+            Seventh
+        } &
+        \makecell[cl]{
+            C\textsuperscript{\o{}7} \\
+            Cm\textsuperscript{7$\flat$5} \\
+            C\textminus\textsuperscript{7$\flat$5}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor{orange}{1}} &
+                \makecell[cc]{\textcolor{orange}{m3}} &
+                \makecell[cc]{\textcolor{orange}{d5}} &
+                \makecell[cc]{m7} & & \\
+                \makecell[cc]{\textbf{\textcolor{orange}{C}}} &
+                \makecell[cc]{\textbf{\textcolor{orange}{E\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{\textcolor{orange}{G\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{B\textsuperscript{$\flat$}}} & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Minor \\
+            Ninth
+        } &
+        \makecell[cl]{
+            Cm\textsuperscript{9} \\
+            C\textminus\textsuperscript{9}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor{blue}{1}} &
+                \makecell[cc]{\textcolor{blue}{m3}} &
+                \makecell[cc]{\textcolor{blue}{5}} &
+                \makecell[cc]{\textcolor{blue}{m7}} &
+                \makecell[cc]{M9} & \\
+                \makecell[cc]{\textbf{\textcolor{blue}{C}}} &
+                \makecell[cc]{\textbf{\textcolor{blue}{E\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{\textcolor{blue}{G}}} &
+                \makecell[cc]{\textbf{\textcolor{blue}{B\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{D}} &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            \textcolor[RGB]{80,0,150}{Dominant} \\
+            \textcolor[RGB]{80,0,150}{Ninth}
+        } &
+        \makecell[cl]{
+            C\textsuperscript{9}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor{red}{1}} &
+                \makecell[cc]{\textcolor{red}{M3}} &
+                \makecell[cc]{\textcolor{red}{5}} &
+                \makecell[cc]{\textcolor{red}{m7}} &
+                \makecell[cc]{M9} & \\
+                \makecell[cc]{\textbf{\textcolor{red}{C}}} &
+                \makecell[cc]{\textbf{\textcolor{red}{E}}} &
+                \makecell[cc]{\textbf{\textcolor{red}{G}}} &
+                \makecell[cc]{\textbf{\textcolor{red}{B\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{D}} &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Major \\
+            Ninth
+        } &
+        \makecell[cl]{
+            Cmaj\textsuperscript{9}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor[RGB]{0,150,20}{1}} &
+                \makecell[cc]{\textcolor[RGB]{0,150,20}{M3}} &
+                \makecell[cc]{\textcolor[RGB]{0,150,20}{5}} &
+                \makecell[cc]{\textcolor[RGB]{0,150,20}{M7}} &
+                \makecell[cc]{M9} & \\
+                \makecell[cc]{\textbf{\textcolor[RGB]{0,150,20}{C}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{0,150,20}{E}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{0,150,20}{G}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{0,150,20}{B}}} &
+                \makecell[cc]{\textbf{D}} &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Eleventh
+        } &
+        \makecell[cl]{
+            C\textsuperscript{11}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{1}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{5}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{m7}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{M9}} &
+                \makecell[cc]{11} & \\
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{C}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{G}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{B\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{D}}} &
+                \makecell[cc]{\textbf{F}} &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Thirteenth
+        } &
+        \makecell[cl]{
+            C\textsuperscript{13}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{1}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{M3}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{5}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{m7}} &
+                \makecell[cc]{\textcolor[RGB]{80,0,150}{M9}} &
+                \makecell[cc]{M13} \\
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{C}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{E}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{G}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{B\textsuperscript{$\flat$}}}} &
+                \makecell[cc]{\textbf{\textcolor[RGB]{80,0,150}{D}}} &
+                \makecell[cc]{\textbf{A}}
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Augmented
+        } &
+        \makecell[cl]{
+            C\textsuperscript{+} \\
+            Caug \\
+            C\textsuperscript{$\sharp$5}
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M3} &
+                \makecell[cc]{d5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{E}} &
+                \makecell[cc]{\textbf{G\textsuperscript{$\sharp$}}} & & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+        Suspended
+        } &
+        \makecell[cl]{
+            Csus2
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{M2} &
+                \makecell[cc]{5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{D}} &
+                \makecell[cc]{\textbf{G}} & & &
+            \end{tabular}
+        } \\
+        \hline
+        \makecell[cl]{
+            Suspended
+        } &
+        \makecell[cl]{
+            Csus4
+        } &
+        \makecell[cc]{
+            \begin{tabular}{ *{6}{p{4.5mm}} }
+                \makecell[cc]{1} &
+                \makecell[cc]{4} &
+                \makecell[cc]{5} & & & \\
+                \makecell[cc]{\textbf{C}} &
+                \makecell[cc]{\textbf{F}} &
+                \makecell[cc]{\textbf{G}} & & &
+            \end{tabular}
+        }
+    \end{tabular}
+}
+
+\end{document}
